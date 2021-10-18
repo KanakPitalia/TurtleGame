@@ -2,9 +2,10 @@
 
 import random
 import turtle
-
+score = 0
 #adding screen
 windo = turtle.Screen()
+windo.setup(width=1.0,height=1.0)
 windo.bgcolor('dark blue')
 
 #adding player i.e turtle
@@ -50,6 +51,7 @@ def k4():
 #function to quit game screen with any key other than up down right left
     
 def k5():
+    print("Your Score is",score)
     windo.bye()
 
 
@@ -83,7 +85,8 @@ t.pd()
 
 #adding scroreboard
 
-score = 0
+
+t.color("white")
 t.write('Score={}'.format(score), align="center",
         font=("courier", 24, 'normal'))
 
@@ -121,6 +124,7 @@ while True:
             a[i].st()
             score = score+2
             t.clear()
+            t.color("white")
             t.write('Score={}'.format(score),
                     align="center", font=("courier", 24))
 
